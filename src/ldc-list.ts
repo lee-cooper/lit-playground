@@ -1,12 +1,13 @@
 import { LitElement, html } from "lit";
-import { customElement } from "lit/decorators.js";
+import { customElement, property } from "lit/decorators.js";
 
 
 @customElement('ldc-list')
 export class LdcList extends LitElement {
 
+    @property() message = 'Hello World';
 
     override render() {
-         return html `hello`;
+         return html `${this.message}`;
     }
 }
